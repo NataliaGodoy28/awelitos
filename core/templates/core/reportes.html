@@ -1,0 +1,32 @@
+{% extends 'core/Plantilla.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+<div class="reporte" style="padding:30px">
+<div class="lista">
+    <table class="table table-striped table-hover" id="storeList">
+        <thead>
+            <tr>
+                <th scope="col">Fecha Ingreso</th>
+                <th scope="col">Nombre Completo</th>
+                <th scope="col">Aportes</th>
+                <th scope="col">codigo Transacción</th>
+        
+            </tr>
+        </thead>
+        <tbody>
+            {% for ing in nombre %}
+            <tr>
+                <td data-label="fecha">{{ing.pagosaportador__fecha_pago}}</td>
+                <td data-label="nombre">{{ing.nombre}} {{ing.apellido}}  </td>
+                <td data-label="monto">{{ing.pagosaportador__monto}} </td>
+                <td data-label="codigo">{{ing.pagosaportador__codigo_transaccion}} </td>
+
+            </tr>
+            {% endfor %}    
+        </tbody>
+    </table>
+</div>
+</div>
+
+{% endblock %}

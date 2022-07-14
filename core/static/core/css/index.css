@@ -1,0 +1,157 @@
+
+
+.container{
+   display: flex;
+   flex-direction:row;
+   justify-content:center;
+   max-width:100%;
+}
+
+
+.agregar{
+   display:none;
+}
+.aportadores   {
+   margin-left: 50px;
+   margin-right: 50px;
+}
+
+ input, optgroup, select, textarea,label{
+  
+   font-family: inherit;
+   font-size: inherit;
+   line-height: inherit;
+   max-width: 400px;
+   display: flex;
+   flex-direction:row;
+
+}
+.sec {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+.sec2{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   width: 100%;
+}
+.seccion1{
+width: 20%;
+min-height: 100vh;
+background-color:#2E4358;
+display: flex;
+flex-direction: column;
+}
+.seccion2{
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+.items{
+   padding: 30px;
+   height: 50px;
+}
+.items2{
+   padding-top: 15px; 
+   display: flex;
+   justify-content: center;
+
+}
+.items3{
+   padding: 15px;
+   height: 50px;
+   color:white;
+   background-color: #ffffff20;
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   margin: 1px;
+   font-size:14px;
+   padding-left:25px;
+   font-family:quirks, "Helvetica Neue", Helvetica,
+}
+
+.items1{
+
+   height: 50px;
+   color:white;
+   font-size:20px;
+   font-family:quirks, "Helvetica Neue", Helvetica,;
+   background-color: #ffffff10;
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   margin: 1px;
+   border-radius: 5px;
+   padding-left: 25px;
+   padding-top: 8px;
+}
+a{
+   text-decoration: none;
+   color:white;
+   font-family:quirks, "Helvetica Neue", Helvetica,;
+
+}
+a:hover{
+   text-decoration: none;
+   color:white;
+   font-family:quirks, "Helvetica Neue", Helvetica,;
+
+}
+
+/*fin*/
+/* seccion 2 estilos */
+
+#logout{
+margin-top: 10px;
+display: flex;
+}
+/* fin */
+@media (max-width:1180px) { 
+
+.sec{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+   
+}
+.sec2{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.seccion1{
+   flex-direction: row;
+   width: 100%;
+min-height: 8vh;
+}
+#fundacion{
+   display: none;
+}
+.items3{
+   display:none;
+}
+.items1{
+   overflow: hidden;
+   height: 40px;
+   padding-right: 10px;
+   text-align: center;
+}
+.items2{
+   display: none;
+}
+.container{
+   display:flex ;
+   flex-direction : row-reverse;
+}
+}
+@media (max-width:1180px) { 
+   .seccion1{
+   width: 100%;
+   }
+}
+@media (max-width:680px) { 
+   .agregar{
+   display:block;
+   }
+}

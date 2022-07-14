@@ -1,0 +1,241 @@
+.container{
+   display: flex;
+}
+.seccion3 {
+
+   height: 20% !important;
+   justify-content: space-between;
+   justify-content: center;
+   text-align: center;
+}
+
+.container-fluid {
+   display: flex;
+   flex-direction: row;
+}
+
+#cuerpo {
+   width: 100%;
+   height:70%;
+
+}
+.cuerpo {
+   margin: 15px;
+   padding: 15px;
+   border: 2px solid ;
+   border-color: gray;
+   width: 100%;  
+}
+.sec {
+   display: flex;
+   flex-direction: row;
+}
+
+.sec2 {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.seccion1 {
+   width: 20%;
+   min-height: 100vh;
+   background-color: #2E4358;
+   display: flex;
+   flex-direction: column;
+}
+
+.items1 {
+   min-height: 60px;
+   color: white;
+   font-size: 16px;
+   font-family: quirks, "Helvetica Neue", Helvetica, ;
+   background-color: #ffffff10;
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   margin: 1px;
+   border-radius: 5px;
+   padding-left: 10px;
+   padding-top: 8px;
+}
+
+.items {
+   padding: 30px;
+   height: 50px;
+}
+
+.items2 {
+   padding-top: 15px;
+   display: flex;
+   justify-content: center;
+
+}
+
+.items3 {
+   padding: 15px;
+   height: 50px;
+   color: white;
+   background-color: #ffffff20;
+   backdrop-filter: blur(12px);
+   -webkit-backdrop-filter: blur(12px);
+   margin: 1px;
+   font-size: 14px;
+   padding-left: 25px;
+   font-family: quirks, "Helvetica Neue", Helvetica,
+}
+
+
+a {
+   text-decoration: none;
+   color: white;
+   font-family: quirks, "Helvetica Neue", Helvetica, ;
+
+}
+
+a:hover {
+   text-decoration: none;
+   color: white;
+   font-family: quirks, "Helvetica Neue", Helvetica, ;
+
+}
+
+/*fin*/
+/* seccion 2 estilos */
+.seccion2 {
+   width: 100%;
+
+
+}
+
+#logout {
+   margin-top: 10px;
+   display: flex;
+}
+
+
+.seccion4 {
+   padding: 75px;
+
+}
+
+.seccion5 {
+   display: flex;
+   justify-content: center;
+
+}
+
+.botones {
+   display: flex;
+   align-content: center;
+
+}
+
+.boton2 {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   align-content: flex-end;
+}
+
+.boton3 {
+   display: flex;
+   justify-content: flex-end;
+   margin-right: 10%;
+}
+
+.busqueda {
+   display: flex;
+   justify-content: flex-end;
+   width: 20%;
+}
+
+.seccion6 {
+   display: flex;
+   justify-content: center;
+}
+
+.listas {
+   display: flex;
+   justify-content: space-around
+}
+
+.lista1 {
+   padding-top: 20px;
+   width: 25%;
+   display: flex;
+   justify-content: flex-start;
+
+}
+
+.lista2 {
+   display: flex;
+   align-items: flex-start;
+}
+
+.otros1 {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   margin: auto;
+}
+
+.otros2 {
+   display: flex;
+   align-items: flex-end;
+}
+
+
+
+
+
+/* fin */
+@media (max-width:1180px) {
+   hr {
+      display: none;
+   }
+
+   .sec {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+   }
+
+   .sec2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+   }
+
+   .seccion1 {
+      flex-direction: row;
+      width: 100%;
+      min-height: 8vh;
+   }
+
+   #fundacion {
+      display: none;
+   }
+
+   .items3 {
+      display: none;
+   }
+
+   .items1 {
+      overflow: hidden;
+      height: 40px;
+      padding-right: 10px;
+      text-align: center;
+   }
+
+   .items2 {
+      display: none;
+   }
+
+   .container-fluid {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+   }
+
+}

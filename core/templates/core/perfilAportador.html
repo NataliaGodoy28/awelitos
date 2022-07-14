@@ -1,0 +1,62 @@
+{% extends 'core/PlantillaPerfilAportador.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+<div class="reporte" style="padding:30px">
+<div class="lista">
+    <table class="table table-striped table-hover" id="storeList">
+        <thead>
+            <tr>
+                <th scope="col">Fecha Ingreso</th>
+                <th scope="col">Nombre Completo</th>
+                <th scope="col">Aportes</th>
+                <th scope="col">codigo Transacción</th>
+                <th scope="col">Ver Mas</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td>01-02-2022</td> 
+                <td></td> 
+                <td></td> 
+                <td></td> 
+                <td>
+
+                    <a href=""><img src="{% static 'core/img/mas.png' %}"
+                            width="30px" alt=""></a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>01-03-2022</td> 
+                <td></td>
+                <td></td>  
+                <td></td> 
+                <td>
+
+                    <a href=" "><img src="{% static 'core/img/mas.png' %}"
+                            width="30px" alt=""></a>
+
+                </td>
+            </tr>
+            <tr>
+                <td>01-03-2022</td> 
+                <td></td> 
+                <td></td> 
+                <td></td>
+                <td>
+
+                    <a href=""><img src="{% static 'core/img/mas.png' %}"
+                            width="30px" alt=""></a>
+
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>
+</div>
+
+{% endblock %}

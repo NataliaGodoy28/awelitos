@@ -1,0 +1,90 @@
+<!--implementar para las interacciones--->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awuelitos</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'core/css/aportador.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!--cabecera--->
+
+    <div class="sec">
+        <!------------seccion 1----------->
+        <div class="seccion1">
+            <div class="items1" id="fundacion">+Fundacion Apoyo</div>
+            <div class="items2"><img src="{% static 'core/img/logo.png' %}" width="100px" alt=""> </div><br>
+            <div class="items1"> <a href=""><img src="{% static 'core/img/Paciente.png' %}" width="30px" alt="">
+                Perfil {{usuario.id}} </a></div>
+
+            <div class="items3"> > Nombre: {{usuario.nombre}} </div>
+            <div class="items3">>{{usuario.correo}} </div>
+            <div class="items1"> <a href="{% url 'reporteAportador' %}"><img src="{% static 'core/img/reporte.png' %}"
+                        width="30px" alt=""> Informes
+                </a></div>
+            <div class="items1"> <a href="{% url 'mandato' %}"  width="30px" alt="">
+                    Mandato</a></div>
+
+        </div>
+
+        <!------------seccion2---------->
+        <div class="seccion2">
+            <!------------nav--------------->
+            <div class="sec2">
+                <div>
+                    <nav class="navbar navbar-expand-lg" id="navegador">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="{% url 'fundacion' %}">Fundacion</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+
+                        </div>
+
+                    </nav>
+                </div>
+                <div>
+
+                    <!----aca estoy linkeando con los tag de django-->
+                    <a href="{% url 'login' %}"><img src="{% static 'core/img/logout.png' %}" width="30px" id="logout"
+                            alt=""></a>
+                </div>
+            </div>
+            <hr>
+            {% block contenido %}
+
+            {% endblock %}
+
+        </div>
+        <!-----fin seccion 2-------->
+
+    </div>
+
+    <script type="text/javascript" src="{% static 'core/js/crudPaciente.js' %}"></script>
+
+
+
+</body>
+
+</html>

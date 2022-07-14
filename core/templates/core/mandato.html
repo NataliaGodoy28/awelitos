@@ -1,0 +1,41 @@
+{% extends 'core/PlantillaPerfilAportador.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+
+<div class="container">
+    <h1>Suscribir aporte automatico</h1>
+</div>
+<div class="container">
+    <br>
+    <p> Con esta suscripcion estás yendo en ayuda de quienes mas lo necesitan, con esto te comprometes a registrar el
+        pago automatico mensual descontado directamente de tu tarjeta de credito. Podras obtener registros de todos tus
+        aportes mensuales a la fundacion.</p>
+</div>
+
+<div class="container">
+
+    <form action="" method="POST" id="mandato">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form|crispy }}
+        </div>
+        <div class="form_action--button">
+            <button type="submit" class="btn btn-primary"> Guardar</button>
+            <button type="reset" class="btn btn-secondary"> Limpiar</button>
+        </div>
+        <div class="alert alert-success" role="alert"> {{ mensaje }} </div>
+    </form>
+</div>
+
+<div class="container">
+    <div class="boton2">
+        <a href="{% url 'reporteAportador'  %} "><button type="button" class="btn btn-outline-info">Regresar</button></a>
+    </div>
+
+
+
+</div>
+
+
+{% endblock %}

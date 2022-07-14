@@ -1,0 +1,102 @@
+#uno {
+    display: none;
+    min-width: 300px;
+    justify-items: flex-start;
+}
+
+#encabezado {
+    background-color: #38B6FF;
+    height: 40px;
+}
+
+#enc {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.inicio {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav {
+    width: 100%;
+
+}
+
+.logo {
+    width: 20px;
+}
+
+.fondo {
+    height: 99vh !important;
+    padding-top: 20px;
+    background-image: url("../img/abbb.jfif");
+    background-repeat: no-repeat;
+    background-position: 0px -100px;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.glass {
+    background-color: #ffffff05;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    height: 250px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-family: helvetica, arial;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.footer {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.info {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+@media (max-width:600px) {
+
+    #lista {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #encabezado {
+        background-color: #38B6FF;
+
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-items: center;
+
+    }
+
+}

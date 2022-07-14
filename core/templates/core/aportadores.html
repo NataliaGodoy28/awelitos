@@ -1,0 +1,38 @@
+{% extends 'core/Plantilla.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+
+<div class="aportadores" style="padding:30px;padding-left: 70px;">
+    <div class="aporta">
+        <table class="table table-striped table-hover" id="storeList">
+            <thead>
+                <tr>
+                  
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">correo</th>
+                  
+
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for u in usuarios %}
+
+                <tr>
+                    <td data-label="nombre">{{u.nombre }} {{u.apellido}}  </td>
+                    <td data-label="correo">{{u.correo}}</td>
+         
+
+                
+                </tr>
+
+                {% endfor %}
+    
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+{% endblock %}

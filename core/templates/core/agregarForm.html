@@ -1,0 +1,27 @@
+{% extends 'core/plantilla.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+
+<!---------------INICIO CRUD PACIENTE----------------->
+
+<div class="container">
+
+    <div class="ingreso">
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {{ form|crispy }}
+            </div>
+            <div class="form_action--button">
+                <button type="submit" class="btn btn-primary"> Guardar</button>
+                <button type="reset" class="btn btn-secondary"> Limpiar</button>
+            </div>
+            <div class="alert alert-success" role="alert"> {{ mensaje }} </div>
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}

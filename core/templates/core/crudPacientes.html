@@ -1,0 +1,79 @@
+{% extends 'core/plantilla.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+<!---------------INICIO CRUD PACIENTE----------------->
+<div class="container">
+    <h4>&nbsp; Nombre Funcionario:&nbsp; {{ request.session.username }} </h4>
+</div>
+<br>
+<div class="container">
+    <div class="agregar"><a href="{% url 'agregarForm' %}"> <img src="{% static 'core/img/nuevo.png' %}" width="30px"
+                alt=""> </a></div>
+</div>
+<br>
+<div class="container" ID="tablaPersona">
+
+    <!-----LISTA DE PACIENTES INGRESADOS------------>
+
+    <div class="lista">
+        <table class="table table-striped table-hover" id="storeList">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha Ingreso</th>
+                    <th scope="col">RUT</th>
+                    <th scope="col">Nombre Completo</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Fecha Nacimiento</th>
+                    <th scope="col">Telefono Emergencia</th>
+                    <th scope="col">Modificar</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Ver Mas</th>
+             
+
+
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for per in personas %}
+                <tr>
+                    <td data-label="fechaIng">{{per.fechaIng}}</td>
+                    <td data-label="rut">{{per.rut}}</td>
+                    <td data-label="nombre">{{per.nombre}}</td>
+                    <td data-label="sexo">{{per.sexo}}</td>
+                    <td data-label="fechaNac">{{per.fechaNac}}</td>
+                    <td data-label="telefono">{{per.telefono}}</td>
+
+
+                    <td>
+
+                        <a href=" {% url 'modificarPersona' per.rut  %} "><img src="{% static 'core/img/edit.png' %}"
+                                width="30px" alt=""></a>
+
+                    </td>
+                    <td>
+
+                        <a href=" {% url 'eliminarPersona' per.rut  %} "><img src="{% static 'core/img/delete.png' %}"
+                                width="30px" alt=""></a>
+
+                    </td>
+                    <td>
+
+                        <a href=" {% url 'fichaClinica' per.rut %} "><img src="{% static 'core/img/mas.png' %}"
+                                width="30px" alt=""></a>
+
+                    </td>
+                  
+                </tr>
+
+
+                {% endfor %}
+
+
+            </tbody>
+        </table>
+    </div>
+    <!-------------FIN CRUD---------->
+</div>
+{% endblock %}

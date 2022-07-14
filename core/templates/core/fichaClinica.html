@@ -1,0 +1,81 @@
+{% extends 'core/plantillaPaciente.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contenido %}
+<div class="container">
+    <div class="seccion3">
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger"><a href="{% url 'evoluciones' persona.rut %}">Evolucionar</a></button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" target="_blank" href="./evoluciones.html">Evolucionar</a></li>
+                <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" target="_blank"
+                        href="https://medlineplus.gov/spanish/encyclopedia.html">Consulta en Línea</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger"> <a href="{% url 'evolucionesAntiguas' persona.rut %}"> Historial Evoluciones</a></button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" target="_blank" href=" ">Evoluciones
+                        antiguas</a></li>
+                <li><a class="dropdown-item" href="./historial.html">Historial de eventos importantes</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" target="_blank"
+                        href="https://medlineplus.gov/spanish/encyclopedia.html">Consulta en Línea</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-danger">Medicamentos</button>
+            <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./Mdiaria.html">Medicación Diaria</a></li>
+                <li><a class="dropdown-item" href="./Mdiaria.html">Cambio de Dosis</a></li>
+                <li><a class="dropdown-item" href="./Mdiaria.html">Medicamentos no frecuentes</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" target="_blank"
+                        href="https://medlineplus.gov/spanish/encyclopedia.html">Consulta en línea</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container" id="cuerpo">
+    <div class="cuerpo">
+
+        <h1>Informe Paciente: <h5> {{persona.nombre}} </h5>  </h1>
+        <hr>
+        <h5> Antecedentes: </h5>
+        <p> {{persona.antecedentes}} </p>
+        <hr>
+        <h5> Evoluciones: </h5>
+        
+      {{evolucion.evolucion}}
+       
+        <p> </p>
+
+    </div>
+
+</div>
+<div class="container">
+    <div>
+        <a href=" {% url 'crud' %} "><img src="{% static 'core/img/return.png' %}" width="30px" alt=""></a>
+    </div>
+</div>
+
+
+{% endblock %}
